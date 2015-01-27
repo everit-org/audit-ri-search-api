@@ -1,2 +1,2 @@
-# audit-ri-search-api
-An API extension of the audit-ri-api for searching functionalities.
+# audit-search-api
+API for audit searching functionalities.

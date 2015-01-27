@@ -1,27 +1,27 @@
 /**
- * This file is part of Everit - Audit RI Search API.
+ * This file is part of Everit - Audit Search API.
  *
- * Everit - Audit RI Search API is free software: you can redistribute it and/or modify
+ * Everit - Audit Search API is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Everit - Audit RI Search API is distributed in the hope that it will be useful,
+ * Everit - Audit Search API is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Everit - Audit RI Search API.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Everit - Audit Search API.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.everit.osgi.audit.ri.search.api;
+package org.everit.osgi.audit.search.api;
 
 import java.time.Instant;
 import java.util.List;
 
-import org.everit.osgi.audit.ri.search.api.dto.EventDataFilter;
-import org.everit.osgi.audit.ri.search.api.dto.EventUi;
-import org.everit.osgi.audit.ri.search.api.dto.FieldWithType;
+import org.everit.osgi.audit.search.api.dto.EventDataFilter;
+import org.everit.osgi.audit.search.api.dto.EventUi;
+import org.everit.osgi.audit.search.api.dto.FieldWithType;
 
 public interface AuditEventReader {
 
