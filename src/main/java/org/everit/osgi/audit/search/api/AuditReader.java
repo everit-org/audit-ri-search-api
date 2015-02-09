@@ -19,14 +19,42 @@ package org.everit.osgi.audit.search.api;
 import java.time.Instant;
 import java.util.List;
 
+import org.everit.osgi.audit.dto.AuditEventType;
+import org.everit.osgi.audit.ri.dto.AuditApplication;
 import org.everit.osgi.audit.search.api.dto.EventDataFilter;
 import org.everit.osgi.audit.search.api.dto.EventUi;
 import org.everit.osgi.audit.search.api.dto.FieldWithType;
 
-public interface AuditEventReader {
+public interface AuditReader {
 
     List<EventUi> findEvents(long[] selectedAppIds, long[] selectedEventTypeIds, List<String> dataFields,
             List<EventDataFilter> eventDataFilters, Instant eventsFrom, Instant eventsTo, long offset, long limit);
+
+    /**
+     * Find applications by name.
+     *
+     * @param applicationName
+     *            the name of the application to find
+     * @return the AuditApplication DTO object that matches the given name or <code>null</code> if not found
+     * @throws NullPointerException
+     *             if {@code applicationName} is <code>null</code>
+     */
+    AuditApplication getApplication(String applicationName);
+
+    /**
+     * Get all applications.
+     *
+     * @return the List of applications
+     */
+    List<AuditApplication> getApplications();
+
+    AuditEventType getAuditEventType(String eventTypeName);
+
+    AuditEventType getAuditEventType(String applicationName, String eventTypeName);
+
+    List<AuditEventType> getAuditEventTypes();
+
+    List<AuditEventType> getAuditEventTypes(String applicationName);
 
     /**
      * Read a single event.
