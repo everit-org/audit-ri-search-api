@@ -1,5 +1,7 @@
 package org.everit.audit.search.api.dto;
 
+import org.everit.audit.dto.EventDataType;
+
 public class FieldWithType {
 
   private final String localizedName;

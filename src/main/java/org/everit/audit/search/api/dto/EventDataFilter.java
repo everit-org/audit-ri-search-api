@@ -2,6 +2,8 @@ package org.everit.audit.search.api.dto;
 
 import java.util.Objects;
 
+import org.everit.audit.dto.EventData;
+
 public class EventDataFilter {
 
   private final EventData operands;

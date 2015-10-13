@@ -3,15 +3,22 @@ package org.everit.audit.search.api;
 import java.time.Instant;
 import java.util.List;
 
+import org.everit.audit.dto.AuditEventType;
+import org.everit.audit.ri.dto.AuditApplication;
 import org.everit.audit.search.api.dto.EventDataFilter;
 import org.everit.audit.search.api.dto.EventUi;
 import org.everit.audit.search.api.dto.FieldWithType;
 
 public interface AuditReader {
 
-  List<EventUi> findEvents(long[] selectedAppIds, long[] selectedEventTypeIds,
+  List<EventUi> findEvents(
+      long[] selectedAppIds,
+      long[] selectedEventTypeIds,
       List<String> dataFields,
-      List<EventDataFilter> eventDataFilters, Instant eventsFrom, Instant eventsTo, long offset,
+      List<EventDataFilter> eventDataFilters,
+      Instant eventsFrom,
+      Instant eventsTo,
+      long offset,
       long limit);
 
   /**
